@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EB15A7C421FFAD4100262240 /* AlbumDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB15A7C321FFAD4100262240 /* AlbumDetailTableViewController.swift */; };
 		EB15A7C621FFB07500262240 /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB15A7C521FFB07500262240 /* SongTableViewCell.swift */; };
+		EB15A7C921FFB2CD00262240 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB15A7C821FFB2CD00262240 /* Album.swift */; };
 		EB1851E421FF9D0F0092FD05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1851E321FF9D0F0092FD05 /* AppDelegate.swift */; };
 		EB1851E921FF9D0F0092FD05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB1851E721FF9D0F0092FD05 /* Main.storyboard */; };
 		EB1851EB21FF9D110092FD05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB1851EA21FF9D110092FD05 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		EB15A7C321FFAD4100262240 /* AlbumDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailTableViewController.swift; sourceTree = "<group>"; };
 		EB15A7C521FFB07500262240 /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
+		EB15A7C821FFB2CD00262240 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		EB1851E021FF9D0F0092FD05 /* iOS Albums.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Albums.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB1851E321FF9D0F0092FD05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB1851E821FF9D0F0092FD05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -41,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB15A7C721FFB2AA00262240 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EB15A7C821FFB2CD00262240 /* Album.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		EB1851D721FF9D0F0092FD05 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +70,7 @@
 		EB1851E221FF9D0F0092FD05 /* iOS Albums */ = {
 			isa = PBXGroup;
 			children = (
+				EB15A7C721FFB2AA00262240 /* Model */,
 				EB1851F721FF9E5B0092FD05 /* View Controller */,
 				EB1851E321FF9D0F0092FD05 /* AppDelegate.swift */,
 				EB1851E721FF9D0F0092FD05 /* Main.storyboard */,
@@ -157,6 +168,7 @@
 				EB1851E421FF9D0F0092FD05 /* AppDelegate.swift in Sources */,
 				EB15A7C421FFAD4100262240 /* AlbumDetailTableViewController.swift in Sources */,
 				EB1851F921FF9E800092FD05 /* AlbumsTableViewController.swift in Sources */,
+				EB15A7C921FFB2CD00262240 /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
