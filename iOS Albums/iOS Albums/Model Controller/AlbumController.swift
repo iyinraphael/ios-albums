@@ -10,13 +10,12 @@ import Foundation
 
 class AlbumController{
     
-    
     func testDecodingExample() {
         let url = Bundle.main.url(forResource: "exampleAlbum", withExtension: "json")!
         let dataURl  = try! Data(contentsOf: url)
         let album = try! JSONDecoder().decode(Album.self, from: dataURl)
-        let encodeAlbum = try! JSONEncoder().encode(album)
-        print("\(encodeAlbum)")
+        put(album: album)
+//        print("\(encodeAlbum)")
         
     }
     
@@ -82,5 +81,23 @@ class AlbumController{
 
 extension AlbumController {
     
+    func createAlbum(artist: String, album:String, genres: [String], coverArt: [URL], songs: [Songs]){
+        let album = Album(artist: artist, album: album, genres: genres, coverArt: coverArt, songs: songs)
+        put(album: album)
+    }
     
+    func createSong(name: String, duration: String) -> Songs{
+        let song = Songs(name: name, duration: duration)
+        return song
+    }
+    
+    func update(albumNew: Album,artist: String, album: String, genres: [String], coverArt: [URL], songs: [Songs] ){
+        var scratch = albumNew
+        scratch.album = album
+        scratch.artist = artist
+        scratch.genres = genres
+        scratch.coverArt = coverArt
+        scratch.songs = songs
+        put(album: scratch)
+    }
 }
