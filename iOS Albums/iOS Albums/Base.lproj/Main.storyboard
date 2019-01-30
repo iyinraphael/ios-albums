@@ -157,6 +157,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="button" destination="FD1-6n-dz3" id="jgh-SJ-nFa"/>
                                     <outlet property="durationTextField" destination="9ye-Um-vv3" id="3ca-nS-u6Y"/>
                                     <outlet property="titleTextfield" destination="2iH-b7-lhi" id="kp8-nk-ftj"/>
                                 </connections>
@@ -205,6 +206,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="d3m-EI-P1p"/>
+        <segue reference="WgA-jS-Zxu"/>
     </inferredMetricsTieBreakers>
 </document>
