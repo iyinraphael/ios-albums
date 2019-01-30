@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Album: Decodable {
+struct Album: Codable {
     
     enum CodingKeys: String, CodingKey {
         case artist
@@ -56,6 +56,21 @@ struct Album: Decodable {
             songs.append(song)
         }
         self.songs = songs
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(artist, forKey: .artist)
+        try container.encode(album, forKey: .name)
+        try container.encode(genres, forKey: .genres)
+        try container.encode(coverArt, forKey: .coverArt)
+        
+        var songContainer = container.nestedUnkeyedContainer(forKey: .songs)
+        for song in songs{
+            try songContainer.encode(song.name)
+            try songContainer.encode(song.duration)
+        }
     }
 }
 
