@@ -11,7 +11,11 @@ import UIKit
 class SongTableViewCell: UITableViewCell {
 
     weak var delegate: SongTableViewCellDelegate?
-    var song: Songs?
+    var song: Songs?{
+        didSet{
+            updateView()
+        }
+    }
     
     func updateView(){
         if let song = song {

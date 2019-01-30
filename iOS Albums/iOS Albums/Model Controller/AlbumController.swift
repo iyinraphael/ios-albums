@@ -81,7 +81,7 @@ class AlbumController{
 
 extension AlbumController {
     
-    func createAlbum(artist: String, album:String, genres: [String], coverArt: [URL], songs: [Songs]){
+    func createAlbum(artist: String, album:String, genres: [String], coverArt: [String], songs: [Songs]){
         let album = Album(artist: artist, album: album, genres: genres, coverArt: coverArt, songs: songs)
         put(album: album)
     }
@@ -91,7 +91,7 @@ extension AlbumController {
         return song
     }
     
-    func update(albumNew: Album,artist: String, album: String, genres: [String], coverArt: [URL], songs: [Songs] ){
+    func update(albumNew: Album,artist: String, album: String, genres: [String], coverArt: [String], songs: [Songs] ){
         var scratch = albumNew
         scratch.album = album
         scratch.artist = artist
